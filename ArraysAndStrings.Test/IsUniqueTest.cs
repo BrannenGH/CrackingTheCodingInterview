@@ -7,7 +7,8 @@ namespace ArraysAndStrings.Test
     {
         public IsUniqueTest()
         {
-            _expected =  new []{
+            _expected = new[]
+            {
                 Tuple.Create("ABC", true),
                 Tuple.Create("AABC", false)
             };
@@ -16,12 +17,9 @@ namespace ArraysAndStrings.Test
         private readonly Tuple<string, bool>[] _expected;
 
         [Fact]
-        public void IsUniqueBruteForce()
+        public void IsUniqueSolution()
         {
-            foreach (var item in _expected)
-            {
-                Assert.Equal(item.Item2,IsUnique.IsUniqueSolution(item.Item1));
-            }
+            foreach (var item in _expected) Assert.Equal(item.Item2, IsUnique.IsUniqueSolution(item.Item1));
         }
     }
 }
